@@ -60,6 +60,9 @@ body {
 	border: 1px solid var(--Slate-300);
 	border-radius: 5px;
 }
+.mortgage-input-row:hover {
+	border: 1px solid var(--Slate-700);
+}
 .input-highlight {
 	padding: 10px;
 	background-color: var(--Slate-100);
