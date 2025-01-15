@@ -104,11 +104,6 @@ body {
 	display: flex;
 	gap: 15px;
 }
-.input-text-highlight {
-	padding: 10px;
-}
-/* .input-text-highlight {
-} */
 .radio-column {
 	display: flex;
 	flex-direction: column;
@@ -219,4 +214,107 @@ body {
 }
 .attribution a {
 	color: hsl(228, 45%, 44%);
+}
+@media (max-width: 475px) {
+	.main-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		border-radius: 0;
+		box-shadow: none;
+	}
+	.left-column {
+		width: 100%;
+		flex: 1;
+		padding: 20px;
+		gap: 30px;
+	}
+	.heading-row {
+		flex-direction: column;
+	}
+	.heading-text {
+	}
+	.clear-text {
+	}
+	.clear-text:hover {
+	}
+	.input-row {
+		flex-direction: column;
+		gap: 5px;
+	}
+	/* .input-label {
+} */
+	.highlight-left {
+		border-radius: 5px 0 0 5px;
+	}
+	.highlight-right {
+		border-radius: 0 5px 5px 0;
+	}
+	.mortgage-amount-input {
+		width: 100%;
+		border-radius: 0 5px 5px 0;
+	}
+	.input-field {
+		border-radius: 0px;
+	}
+	.input-columns {
+		flex-direction: column;
+		gap: 30px;
+	}
+	.input-row {
+		border-radius: 5px 0 0 5px;
+	}
+	.mortgage-input-row {
+		border-radius: 5px;
+	}
+	.row-left {
+		border-radius: 5px;
+	}
+	.mortgage-interest-input {
+		width: 100%;
+		border-radius: 5px 0 0 5px;
+	}
+	.input-highlight {
+		padding: 10px;
+	}
+	.radio-column {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+	.radio-row {
+		display: flex;
+		gap: 10px;
+		padding: 10px;
+		border: 1px solid var(--Slate-300);
+		border-radius: 5px;
+		cursor: pointer;
+	}
+	.radio-row:hover {
+		border: 1px solid var(--Lime);
+	}
+	/* .radio.label {
+} */
+
+	.calculate-button {
+		justify-content: center;
+		margin: -10px 0 0 0;
+		width: 100%;
+	}
+	.right-column {
+		flex: 1;
+		border-radius: 0;
+	}
+	.results-default-column {
+		gap: 15px;
+	}
+	.illustration-image {
+		width: 55%;
+	}
+	.results-dynamic-column {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		display: none;
+	}
 }
