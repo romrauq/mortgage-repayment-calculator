@@ -46,8 +46,10 @@ body {
 	justify-content: space-between;
 }
 .heading-text {
+	font-size: 20px;
 	font-weight: bold;
 	color: var(--Slate-900);
+	margin: 0 0 10px 0;
 }
 .clear-text {
 	color: var(--Slate-700);
