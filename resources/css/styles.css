@@ -114,6 +114,7 @@ body {
 	padding: 10px;
 	border: 1px solid var(--Slate-300);
 	border-radius: 5px;
+	cursor: pointer;
 }
 .radio-row:hover {
 	border: 1px solid var(--Lime);
