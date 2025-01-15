@@ -21,7 +21,8 @@ body {
 	justify-content: space-between;
 	background-color: var(--Slate-100);
 }
-.main-comtainer {
+.main-container {
+	font-size: 16px;
 	margin: auto 0;
 	display: flex;
 	border-radius: 15px;
@@ -39,27 +40,54 @@ body {
 	display: flex;
 	justify-content: space-between;
 }
-.input-row-full {
+.heading-text {
+	font-weight: bold;
+	color: var(--Slate-900);
 }
-.input-label {
+.clear-text {
+	color: var(--Slate-700);
+	text-decoration: underline;
 }
-.amount-input-row {
+.input-row {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
 }
-.input-text-highlight {
+/* .input-label {
+} */
+.mortgage-input-row {
+	display: flex;
+	border: 1px solid var(--Slate-300);
+	border-radius: 5px;
+}
+.input-highlight {
+	padding: 10px;
+	background-color: var(--Slate-100);
+}
+.highlight-left {
+	border-radius: 5px 0 0 5px;
+}
+.highlight-right {
+	border-radius: 0 5px 5px 0;
+}
+
+.mortgage-amount-input {
+	width: 100%;
+}
+.input-field {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
 }
 .input-columns {
 	display: flex;
 	gap: 15px;
 }
-.mortgage-input-row {
-	display: flex;
-}
 .input-text-highlight {
+	padding: 10px;
 }
-.mortgage-input-row {
-}
-.input-text-highlight {
-}
+/* .input-text-highlight {
+} */
 .radio-column {
 	display: flex;
 	flex-direction: column;
@@ -73,6 +101,32 @@ body {
 	padding: 30px;
 	background-color: var(--Slate-900);
 	border-radius: 0 15px 15px 0;
+}
+.radio-row {
+	display: flex;
+	gap: 10px;
+	padding: 10px;
+	border: 1px solid var(--Slate-300);
+	border-radius: 5px;
+}
+/* .radio.label {
+} */
+
+.calculate-button {
+	color: var(--Slate-900);
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 15px 20px;
+	width: fit-content;
+	background-color: var(--Lime);
+	border-radius: 30px;
+	border: none;
+	cursor: pointer;
+}
+.calculate-button > img {
+	width: 16px;
 }
 .results-default-column {
 	text-align: center;
