@@ -107,15 +107,6 @@ body {
 	flex-direction: column;
 	gap: 5px;
 }
-.right-column {
-	flex: 1;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 30px;
-	background-color: var(--Slate-900);
-	border-radius: 0 15px 15px 0;
-}
 .radio-row {
 	display: flex;
 	gap: 10px;
@@ -145,6 +136,15 @@ body {
 }
 .calculate-button > img {
 	width: 16px;
+}
+.right-column {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 30px;
+	background-color: var(--Slate-900);
+	border-radius: 0 15px 15px 0;
 }
 .results-default-column {
 	text-align: center;
