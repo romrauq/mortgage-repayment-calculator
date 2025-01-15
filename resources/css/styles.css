@@ -152,17 +152,29 @@ body {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	align-items: center;
 	padding: 30px;
 	background-color: var(--Slate-900);
 	border-radius: 0 15px 15px 70px;
 }
 .results-default-column {
+	color: var(--White);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 10px;
 	text-align: center;
+	margin: auto 0;
+}
+.illustration-image {
+	width: 40%;
 }
 .results-heading {
+	font-size: 20px;
+	font-weight: bold;
 }
 .results-description {
+	font-size: 14px;
+	color: var(--Slate-300);
 }
 .results-dynamic-column {
 	display: none;
