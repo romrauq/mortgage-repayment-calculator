@@ -31,6 +31,7 @@ body {
 	margin: auto 0;
 	display: flex;
 	border-radius: 15px;
+	background-color: var(--White);
 }
 .left-column {
 	flex: 1;
