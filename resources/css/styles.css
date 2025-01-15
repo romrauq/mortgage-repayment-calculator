@@ -79,6 +79,9 @@ body {
 	border: none;
 	border-radius: 5px;
 }
+.input-field:focus {
+	outline: none;
+}
 .input-columns {
 	display: flex;
 	gap: 15px;
