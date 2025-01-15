@@ -54,6 +54,11 @@ body {
 .clear-text {
 	color: var(--Slate-700);
 	text-decoration: underline;
+	cursor: pointer;
+}
+.clear-text:hover {
+	color: var(--Slate-900);
+	text-decoration: none;
 }
 .input-row {
 	display: flex;
