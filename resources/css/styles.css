@@ -128,6 +128,7 @@ body {
 	align-items: center;
 	gap: 10px;
 	padding: 15px 20px;
+	margin: 10px 0 0 0;
 	width: fit-content;
 	background-color: var(--Lime);
 	border-radius: 30px;
