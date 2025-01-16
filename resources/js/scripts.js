@@ -27,70 +27,68 @@ calculate_button.addEventListener("click", (event) => {
 		// Change container border to red:
 		mortgage_amount_container.style.border = "1px solid hsl(4, 69%, 50%)";
 		// Change the input highlight text color:
-
+		mortgage_amount_highlight.style.color = "hsl(0, 0%, 100%)";
 		// Change the input highlight background color:
-
+		mortgage_amount_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
 		// Display alert text:
 	} else {
 		// Revert container border to default:
 		mortgage_amount_container.style.border = "1px solid hsl(203, 41%, 72%)";
-
 		// Revert the input highlight text color to default:
-
+		mortgage_amount_highlight.style.color = "hsl(200, 24%, 40%)";
 		// Revert the input highlight background color to default:
-
+		mortgage_amount_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
 		// Remove alert text display:
 
 		// Convert value type to integer & assign to local variable:
 		mortgage_amount = parseInt(mortgage_amount_input.value);
-		console.log(typeof mortgage_amount);
+		// console.log(typeof mortgage_amount);
 	}
 
 	if (mortgage_term_input.value.length == 0) {
 		// Change container border to red:
 		mortgage_term_container.style.border = "1px solid hsl(4, 69%, 50%)";
 		// Change the input highlight text color:
-
+		mortgage_term_highlight.style.color = "hsl(0, 0%, 100%)";
 		// Change the input highlight background color:
-
+		mortgage_term_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
 		// Display alert text:
 		console.log("Empty MTI input!");
 	} else {
 		// Revert container border to default:
 		mortgage_term_container.style.border = "1px solid hsl(203, 41%, 72%)";
-
 		// Revert the input highlight text color to default:
-
+		mortgage_term_highlight.style.color = "hsl(200, 24%, 40%)";
 		// Revert the input highlight background color to default:
-
+		mortgage_term_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
 		// Remove alert text display:
 
 		// Convert value type to integer & assign to local variable:
 		mortgage_term = parseInt(mortgage_term_input.value);
-		console.log(typeof mortgage_term);
+		// console.log(typeof mortgage_term);
 	}
 
 	if (interest_rate_input.value.length == 0) {
 		// Change container border to red:
 		interest_rate_container.style.border = "1px solid hsl(4, 69%, 50%)";
 		// Change the input highlight text color:
-
+		interest_rate_highlight.style.color = "hsl(0, 0%, 100%)";
 		// Change the input highlight background color:
+		interest_rate_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
 
 		// Display alert text:
 		console.log("Empty IRT input!");
 	} else {
 		// Revert container border to default:
 		interest_rate_container.style.border = "1px solid hsl(203, 41%, 72%)";
-
 		// Revert the input highlight text color to default:
-
+		interest_rate_highlight.style.color = "hsl(200, 24%, 40%)";
 		// Revert the input highlight background color to default:
-
+		interest_rate_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
 		// Remove alert text display:
 
 		// Convert value type to integer & assign to local variable:
 		interest_rate = parseInt(interest_rate_input.value);
-		console.log(typeof interest_rate);
+		// console.log(typeof interest_rate);
 	}
 });
