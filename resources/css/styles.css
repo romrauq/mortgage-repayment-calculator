@@ -43,7 +43,7 @@ body {
 	background-color: var(--White);
 	border-radius: 15px 0 0 15px;
 }
-.heading-row {
+.heading-container {
 	display: flex;
 	justify-content: space-between;
 }
@@ -62,13 +62,15 @@ body {
 	color: var(--Slate-900);
 	text-decoration: none;
 }
-.input-row {
+.input-label-container {
 	display: flex;
 	flex-direction: column;
-	gap: 5px;
+	gap: 10px;
 }
-/* .input-label {
-} */
+.input-label-text {
+	font-weight: 500;
+	color: var(--Slate-700);
+}
 .mortgage-input-row {
 	display: flex;
 	border: 1px solid var(--Slate-300);
@@ -84,18 +86,21 @@ body {
 .highlight-left {
 	border-radius: 5px 0 0 5px;
 }
-.highlight-right {
-	border-radius: 0 5px 5px 0;
-}
-
-.mortgage-amount-input {
-	width: 100%;
-}
 .input-field {
 	padding: 10px;
 	border: none;
-	border-radius: 5px;
 	cursor: pointer;
+}
+.highlight-right {
+	border-radius: 0 5px 5px 0;
+}
+.input-field-right {
+	width: 100%;
+	border-radius: 0 5px 5px 0;
+}
+.input-field-left {
+	width: 100%;
+	border-radius: 5px 0 0 5px;
 }
 .input-field:focus {
 	outline: none;
@@ -129,7 +134,7 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	padding: 15px 20px;
+	padding: 15px 40px;
 	margin: 10px 0 0 0;
 	width: fit-content;
 	background-color: var(--Lime);
@@ -229,7 +234,7 @@ body {
 		padding: 20px;
 		gap: 30px;
 	}
-	.heading-row {
+	.heading-container {
 		flex-direction: column;
 	}
 	.heading-text {
@@ -238,12 +243,12 @@ body {
 	}
 	.clear-text:hover {
 	}
-	.input-row {
+	.input-label-container {
 		flex-direction: column;
 		gap: 5px;
 	}
-	/* .input-label {
-} */
+	.input-label-text {
+	}
 	.highlight-left {
 		border-radius: 5px 0 0 5px;
 	}
@@ -264,15 +269,11 @@ body {
 	.input-row {
 		border-radius: 5px 0 0 5px;
 	}
-	.mortgage-input-row {
+	.text-input-div {
 		border-radius: 5px;
 	}
 	.row-left {
 		border-radius: 5px;
-	}
-	.mortgage-interest-input {
-		width: 100%;
-		border-radius: 5px 0 0 5px;
 	}
 	.input-highlight {
 		padding: 10px;
