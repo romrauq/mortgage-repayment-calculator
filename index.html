@@ -14,14 +14,20 @@
 			<div class="left-column">
 				<div class="heading-container">
 					<p class="heading-text">Mortgage Calculator</p>
-					<p class="clear-text">Clear All</p>
+					<p class="clear-text" id="clear-button">Clear All</p>
 				</div>
 
 				<div class="input-label-container">
 					<p class="input-label-text">Mortgage Amount</p>
 					<div class="mortgage-input-row">
 						<span class="input-highlight highlight-left">$</span>
-						<input type="number" name="" id="" class="input-field input-field-right" />
+						<input
+							type="number"
+							name=""
+							id=""
+							class="input-field input-field-right"
+							id="mortgage-amount-input"
+						/>
 					</div>
 				</div>
 
@@ -29,7 +35,13 @@
 					<div class="input-label-container">
 						<p class="input-label-text">Mortgage Term</p>
 						<div class="mortgage-input-row row-left">
-							<input type="number" name="" id="" class="input-field input-field-left" />
+							<input
+								type="number"
+								name=""
+								id=""
+								class="input-field input-field-left"
+								id="mortgage-term-input"
+							/>
 							<span class="input-highlight highlight-right">years</span>
 						</div>
 					</div>
@@ -37,7 +49,13 @@
 					<div class="input-label-container">
 						<p class="input-label-text">Interest Rate</p>
 						<div class="mortgage-input-row row-left">
-							<input type="number" name="" id="" class="input-field input-field-left" />
+							<input
+								type="number"
+								name=""
+								id=""
+								class="input-field input-field-left"
+								id="interest-rate-input"
+							/>
 							<span class="input-highlight highlight-right">%</span>
 						</div>
 					</div>
@@ -47,17 +65,17 @@
 					<p class="input-label-text">Mortgate Type</p>
 					<div class="radio-column">
 						<div class="radio-row">
-							<input type="radio" name="" id="" />
+							<input type="radio" name="" id="" id="repayment-radio" />
 							<label for="" class="radio-label">Repayment</label>
 						</div>
 						<div class="radio-row">
-							<input type="radio" name="" id="" />
+							<input type="radio" name="" id="" id="interest-omly-radio" />
 							<label for="" class="radio-label">Interest Only </label>
 						</div>
 					</div>
 				</div>
 
-				<button class="calculate-button">
+				<button class="calculate-button" id="calculate-button">
 					<img src="./resources/images/icon-calculator.svg" alt="" />Calculate Repayments
 				</button>
 			</div>
@@ -88,11 +106,11 @@
 					<div class="output-row">
 						<div class="monthly-row">
 							<p class="results-description">Your monthly repayments</p>
-							<p class="monthly-repayments">$1,797.79</p>
+							<p class="monthly-repayments" id="monthly-payments-output">$1,797.79</p>
 						</div>
 						<div class="total-row">
 							<p class="results-description">Total you'll repay over the term</p>
-							<p class="total-repayments">$539,322.94</p>
+							<p class="total-repayments" id="total-repayment-output">$539,322.94</p>
 						</div>
 					</div>
 				</div>
