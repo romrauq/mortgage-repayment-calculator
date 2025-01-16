@@ -85,6 +85,8 @@ body {
 	border: 1px solid var(--Slate-700);
 }
 .input-highlight {
+	color: hsl(200, 24%, 40%);
+	font-weight: bold;
 	padding: 10px;
 	background-color: var(--Slate-100);
 }
