@@ -112,6 +112,11 @@ body {
 .input-field:focus {
 	outline: none;
 }
+.alert-text {
+	color: var(--Red);
+	font-size: 14px;
+	display: none;
+}
 .input-columns {
 	display: flex;
 	gap: 15px;
