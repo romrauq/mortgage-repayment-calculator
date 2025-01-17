@@ -35,6 +35,7 @@ calculate_button.addEventListener("click", (event) => {
 		// Change the input highlight background color:
 		mortgage_amount_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
 		// Display alert text:
+		mortgage_amount_alert.style.display = "block";
 	} else {
 		// Revert container border to default:
 		mortgage_amount_container.style.border = "1px solid hsl(203, 41%, 72%)";
@@ -43,7 +44,7 @@ calculate_button.addEventListener("click", (event) => {
 		// Revert the input highlight background color to default:
 		mortgage_amount_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
 		// Remove alert text display:
-
+		mortgage_amount_alert.style.display = "none";
 		// Convert value type to integer & assign to local variable:
 		mortgage_amount = parseInt(mortgage_amount_input.value);
 		// console.log(typeof mortgage_amount);
@@ -57,6 +58,7 @@ calculate_button.addEventListener("click", (event) => {
 		// Change the input highlight background color:
 		mortgage_term_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
 		// Display alert text:
+		mortgage_term_alert.style.display = "block";
 		console.log("Empty MTI input!");
 	} else {
 		// Revert container border to default:
@@ -66,7 +68,7 @@ calculate_button.addEventListener("click", (event) => {
 		// Revert the input highlight background color to default:
 		mortgage_term_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
 		// Remove alert text display:
-
+		mortgage_term_alert.style.display = "none";
 		// Convert value type to integer & assign to local variable:
 		mortgage_term = parseInt(mortgage_term_input.value);
 		// console.log(typeof mortgage_term);
@@ -79,8 +81,8 @@ calculate_button.addEventListener("click", (event) => {
 		interest_rate_highlight.style.color = "hsl(0, 0%, 100%)";
 		// Change the input highlight background color:
 		interest_rate_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
-
 		// Display alert text:
+		interest_rate_alert.style.display = "block";
 		console.log("Empty IRT input!");
 	} else {
 		// Revert container border to default:
@@ -90,7 +92,7 @@ calculate_button.addEventListener("click", (event) => {
 		// Revert the input highlight background color to default:
 		interest_rate_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
 		// Remove alert text display:
-
+		interest_rate_alert.style.display = "none";
 		// Convert value type to integer & assign to local variable:
 		interest_rate = parseInt(interest_rate_input.value);
 		// console.log(typeof interest_rate);
