@@ -27,74 +27,68 @@ calculate_button.addEventListener("click", (event) => {
 	let mortgage_term;
 	let interest_rate;
 
+	// Validate and fetch mortgage amount:
 	if (mortgage_amount_input.value.length == 0) {
-		// Change container border to red:
 		mortgage_amount_container.style.border = "1px solid hsl(4, 69%, 50%)";
-		// Change the input highlight text color:
 		mortgage_amount_highlight.style.color = "hsl(0, 0%, 100%)";
-		// Change the input highlight background color:
 		mortgage_amount_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
-		// Display alert text:
 		mortgage_amount_alert.style.display = "block";
 	} else {
-		// Revert container border to default:
 		mortgage_amount_container.style.border = "1px solid hsl(203, 41%, 72%)";
-		// Revert the input highlight text color to default:
 		mortgage_amount_highlight.style.color = "hsl(200, 24%, 40%)";
-		// Revert the input highlight background color to default:
 		mortgage_amount_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
-		// Remove alert text display:
 		mortgage_amount_alert.style.display = "none";
-		// Convert value type to integer & assign to local variable:
-		mortgage_amount = parseInt(mortgage_amount_input.value);
-		// console.log(typeof mortgage_amount);
+		mortgage_amount = parseFloat(mortgage_amount_input.value);
 	}
 
+	// Validate and fetch mortgage term
 	if (mortgage_term_input.value.length == 0) {
-		// Change container border to red:
 		mortgage_term_container.style.border = "1px solid hsl(4, 69%, 50%)";
-		// Change the input highlight text color:
 		mortgage_term_highlight.style.color = "hsl(0, 0%, 100%)";
-		// Change the input highlight background color:
 		mortgage_term_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
-		// Display alert text:
 		mortgage_term_alert.style.display = "block";
-		console.log("Empty MTI input!");
 	} else {
-		// Revert container border to default:
 		mortgage_term_container.style.border = "1px solid hsl(203, 41%, 72%)";
-		// Revert the input highlight text color to default:
 		mortgage_term_highlight.style.color = "hsl(200, 24%, 40%)";
-		// Revert the input highlight background color to default:
 		mortgage_term_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
-		// Remove alert text display:
 		mortgage_term_alert.style.display = "none";
-		// Convert value type to integer & assign to local variable:
 		mortgage_term = parseInt(mortgage_term_input.value);
-		// console.log(typeof mortgage_term);
 	}
 
+	// Validate and fetch interest rate
 	if (interest_rate_input.value.length == 0) {
-		// Change container border to red:
 		interest_rate_container.style.border = "1px solid hsl(4, 69%, 50%)";
-		// Change the input highlight text color:
 		interest_rate_highlight.style.color = "hsl(0, 0%, 100%)";
-		// Change the input highlight background color:
 		interest_rate_highlight.style.backgroundColor = "hsl(4, 69%, 50%)";
-		// Display alert text:
 		interest_rate_alert.style.display = "block";
-		console.log("Empty IRT input!");
 	} else {
-		// Revert container border to default:
 		interest_rate_container.style.border = "1px solid hsl(203, 41%, 72%)";
-		// Revert the input highlight text color to default:
 		interest_rate_highlight.style.color = "hsl(200, 24%, 40%)";
-		// Revert the input highlight background color to default:
 		interest_rate_highlight.style.backgroundColor = "hsl(202, 86%, 94%)";
-		// Remove alert text display:
 		interest_rate_alert.style.display = "none";
-		// Convert value type to integer & assign to local variable:
-		interest_rate = parseInt(interest_rate_input.value);
-		// console.log(typeof interest_rate);
+		interest_rate = parseFloat(interest_rate_input.value);
+	}
+
+	// Perform calculations if all inputs are valid
+	if (mortgage_amount && mortgage_term && interest_rate) {
+		const monthly_interest_rate = interest_rate / 100 / 12; // Convert annual rate to monthly
+		const total_payments = mortgage_term * 12; // Total number of monthly payments
+		const monthly_payment =
+			(mortgage_amount *
+				(monthly_interest_rate * Math.pow(1 + monthly_interest_rate, total_payments))) /
+			(Math.pow(1 + monthly_interest_rate, total_payments) - 1);
+		const total_repayment = monthly_payment * total_payments;
+
+		// Remove static container element within right column:
+		static_container.style.display = "none";
+		// Display dynamic container element within right column:
+		dynamic_container.style.display = "block";
+		// Update the output elements
+		monthly_payments_output.textContent = Number(monthly_payment.toFixed(2)).toLocaleString(
+			"en-US"
+		);
+		total_repayment_output.textContent = Number(total_repayment.toFixed(2)).toLocaleString(
+			"en-US"
+		);
 	}
 });
