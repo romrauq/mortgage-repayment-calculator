@@ -82,7 +82,7 @@ calculate_button.addEventListener("click", (event) => {
 		// Remove static container element within right column:
 		static_container.style.display = "none";
 		// Display dynamic container element within right column:
-		dynamic_container.style.display = "block";
+		dynamic_container.style.display = "flex";
 		// Update the output elements
 		monthly_payments_output.textContent = Number(monthly_payment.toFixed(2)).toLocaleString(
 			"en-US"
